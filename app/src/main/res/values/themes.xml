@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Taskbar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/header_bg</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/header_bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <!-- Header/Toolbar -->
+    <style name="Taskbar.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/header_bg</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/muted</item>
+    </style>
+
+    <!-- Setting Row -->
+    <style name="SettingRow">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/ripple_bg</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Title text -->
+    <style name="SettingTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <!-- Subtitle text -->
+    <style name="SettingSubtitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!-- Menu Row -->
+    <style name="MenuRow">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:background">@drawable/ripple_bg</item>
+        <item name="android:minHeight">58dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Section label -->
+    <style name="SectionLabel">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <!-- BottomSheet dark style -->
+    <style name="BottomSheetTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/surface</item>
+        <item name="behavior_peekHeight">500dp</item>
+    </style>
+
+</resources>

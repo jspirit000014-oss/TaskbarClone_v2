@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/taskbar_background"
+    android:padding="8dp"
+    android:elevation="8dp">
+
+    <!-- Start Button -->
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_windows"
+        android:background="@drawable/button_background"
+        android:contentDescription="@string/start_menu"
+        android:scaleType="centerInside"
+        android:padding="8dp" />
+
+    <!-- Pinned Apps RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pinnedAppsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal" />
+
+    <!-- System Tray -->
+    <LinearLayout
+        android:id="@+id/systemTray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Clock -->
+        <TextView
+            android:id="@+id/clockTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

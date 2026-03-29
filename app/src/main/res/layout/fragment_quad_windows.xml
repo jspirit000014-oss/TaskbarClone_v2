@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Taskbar.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="4Window - Lanzar 4 apps"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:text="Elige hasta 4 aplicaciones para abrirlas en ventanas libres ocupando cada cuadrante de la pantalla."
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:rowOrderPreserved="false"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <include
+                    android:id="@+id/slot1"
+                    layout="@layout/item_quad_slot" />
+
+                <include
+                    android:id="@+id/slot2"
+                    layout="@layout/item_quad_slot" />
+
+                <include
+                    android:id="@+id/slot3"
+                    layout="@layout/item_quad_slot" />
+
+                <include
+                    android:id="@+id/slot4"
+                    layout="@layout/item_quad_slot" />
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btn_launch_quad"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_orange"
+                android:text="LANZAR 4 VENTANAS"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_shizuku_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Conceder permiso a Shizuku"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_reset_quad_bounds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Restablecer posiciones a 2×2"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Con Shizuku activo las ventanas se posicionan exactamente en sus cuadrantes. Abre Shizuku → Iniciar por Depuración inalámbrica, luego toca el botón de arriba."
+                android:textColor="@color/muted"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

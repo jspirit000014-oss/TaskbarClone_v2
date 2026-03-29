@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Barra de tareas</string>
+    <string name="settings">Ajustes</string>
+    <string name="enable_taskbar">Activar barra de tareas</string>
+    <string name="disable_taskbar">Desactivar barra de tareas</string>
+    <string name="start_menu">Menú inicio</string>
+    <string name="all_apps">Todas las apps</string>
+    <string name="search_apps">Buscar apps…</string>
+    <string name="pinned_apps">Apps fijadas</string>
+    <string name="recent_apps">Apps recientes</string>
+    <string name="position">Posición</string>
+    <string name="size">Tamaño</string>
+    <string name="auto_start">Iniciar al arrancar</string>
+    <string name="permissions_required">Permisos necesarios</string>
+    <string name="overlay_permission">Permiso de superposición</string>
+    <string name="usage_stats_permission">Permiso de estadísticas de uso</string>
+    <string name="grant_permission">Conceder permiso</string>
+
+    <!-- MainActivity -->
+    <string name="taskbar_status">Estado de la barra</string>
+    <string name="permissions">Permisos</string>
+    <string name="permissions_description">La barra necesita permiso de superposición para mostrarse sobre otras apps y estadísticas de uso para apps recientes.</string>
+    <string name="grant_permissions">Conceder permisos</string>
+    <string name="desktop_experience">Experiencia de escritorio en Android</string>
+    <string name="version">Versión %1$s</string>
+
+    <string name="all_permissions_granted">Todos los permisos concedidos ✓</string>
+    <string name="grant_overlay_permission">Conceder permiso de superposición</string>
+    <string name="grant_usage_stats">Conceder estadísticas de uso</string>
+    <string name="disable_battery_optimization">Desactivar optimización de batería</string>
+    <string name="overlay_permission_granted">Permiso de superposición concedido</string>
+    <string name="overlay_permission_required">Se necesita el permiso de superposición para que funcione la barra</string>
+    <string name="grant_overlay_first">Por favor concede primero el permiso de superposición</string>
+    <string name="taskbar_enabled">Barra de tareas activada</string>
+    <string name="taskbar_disabled">Barra de tareas desactivada</string>
+    <string name="notification_permission_granted">Permiso de notificaciones concedido</string>
+    <string name="battery_optimization_hint">Desactiva la optimización de batería para que la barra funcione bien en segundo plano</string>
+    <string name="usage_stats_hint">Las estadísticas de uso son necesarias para mostrar las apps recientes</string>
+    <string name="usage_stats_granted">Permiso de estadísticas de uso concedido</string>
+
+    <!-- Settings -->
+    <string name="taskbar_position">Posición de la barra</string>
+    <string name="position_bottom">Abajo</string>
+    <string name="position_top">Arriba</string>
+    <string name="position_left">Izquierda</string>
+    <string name="position_right">Derecha</string>
+    <string name="size_small">Pequeño</string>
+    <string name="size_medium">Mediano</string>
+    <string name="size_large">Grande</string>
+    <string name="size_format">Tamaño: %1$s (%2$ddp)</string>
+    <string name="startup">Inicio</string>
+    <string name="start_on_boot_desc">Iniciar automáticamente la barra al arrancar el dispositivo</string>
+    <string name="freeform_launch">Abrir en ventana flotante</string>
+    <string name="freeform_launch_desc">Abrir apps en ventana flotante redimensionable cuando esté disponible</string>
+    <string name="hide_on_lock">Ocultar en pantalla bloqueada</string>
+    <string name="hide_on_lock_desc">Ocultar la barra cuando la pantalla esté bloqueada</string>
+    <string name="blocked_apps">Apps bloqueadas</string>
+    <string name="blocked_apps_desc">Apps ocultas de la lista</string>
+    <string name="pin_app">Fijar en la barra</string>
+    <string name="unpin_app">Quitar de la barra</string>
+    <string name="block_app">Bloquear app</string>
+    <string name="unblock_app">Desbloquear app</string>
+    <string name="app_info">Info de la app</string>
+
+    <!-- Taskbar Service -->
+    <string name="notification_title">Barra de tareas</string>
+    <string name="notification_text">La barra está activa</string>
+    <string name="close">Cerrar</string>
+</resources>

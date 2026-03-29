@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <!-- TOOLBAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/header_bg"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ajustes generales"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Vista del menu de inicio -->
+            <LinearLayout android:id="@+id/row_start_view"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg" android:orientation="vertical"
+                android:paddingStart="16dp" android:paddingEnd="14dp"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Vista del menú de inicio" android:textColor="@color/text" android:textSize="14sp"/>
+                <TextView android:id="@+id/val_start_view"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Cuadrícula" android:textColor="@color/muted" android:textSize="12sp" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <!-- Posicion en pantalla -->
+            <LinearLayout android:id="@+id/row_position"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg" android:orientation="vertical"
+                android:paddingStart="16dp" android:paddingEnd="14dp"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Posición en pantalla" android:textColor="@color/text" android:textSize="14sp"/>
+                <TextView android:id="@+id/val_position"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Derecha superior (vertical)" android:textColor="@color/muted" android:textSize="12sp" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <!-- Visibilidad barra busqueda -->
+            <LinearLayout android:id="@+id/row_searchbar"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg" android:orientation="vertical"
+                android:paddingStart="16dp" android:paddingEnd="14dp"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Visibilidad de la barra de búsqueda" android:textColor="@color/text" android:textSize="14sp"/>
+                <TextView android:id="@+id/val_searchbar"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Mostrar siempre la barra de búsqueda" android:textColor="@color/muted" android:textSize="12sp" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <!-- Configurar apps en el menu -->
+            <LinearLayout android:id="@+id/row_app_config"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg" android:orientation="vertical"
+                android:paddingStart="16dp" android:paddingEnd="14dp"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Configurar aplicaciones en el menú de inicio" android:textColor="@color/text" android:textSize="14sp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="0 aplicaciones ocultas · 0 aplicaciones populares" android:textColor="@color/muted" android:textSize="12sp" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <!-- Checks -->
+            <include layout="@layout/item_check_row" android:id="@+id/row_show_scrollbar"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <include layout="@layout/item_check_row" android:id="@+id/row_hide_after_select"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <include layout="@layout/item_check_row" android:id="@+id/row_auto_collapse"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <include layout="@layout/item_check_row" android:id="@+id/row_alt_position"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <include layout="@layout/item_check_row" android:id="@+id/row_lock_rotation"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+            <include layout="@layout/item_check_row" android:id="@+id/row_start_on_boot"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <!-- Ajustes de notificacion -->
+            <LinearLayout android:id="@+id/row_notif_settings"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg" android:orientation="horizontal"
+                android:paddingStart="16dp" android:paddingEnd="14dp"
+                android:paddingTop="12dp" android:paddingBottom="12dp"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Ajustes de notificación del sistema" android:textColor="@color/text" android:textSize="14sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="›" android:textSize="22sp" android:textColor="@color/muted"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <View android:layout_width="match_parent" android:layout_height="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <!-- TOOLBAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/header_bg"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Taskbar"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switch_taskbar_enabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/white"
+            android:trackTint="@color/orange"
+            android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+
+    <!-- SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- PERMISSION BANNER -->
+            <LinearLayout
+                android:id="@+id/perm_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_perm_banner"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️  Permisos requeridos"
+                    android:textColor="@color/orange2"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/perm_banner_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Taskbar necesita ciertos permisos para funcionar correctamente. Toca el botón para concederlos todos de una vez."
+                    android:textColor="@color/muted"
+                    android:textSize="11sp"
+                    android:lineSpacingMultiplier="1.5" />
+
+                <Button
+                    android:id="@+id/btn_grant_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_orange"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="Conceder todos los permisos"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:elevation="2dp"/>
+            </LinearLayout>
+
+            <!-- SECTION LABEL -->
+            <TextView
+                style="@style/SectionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Configuración" />
+
+            <!-- MENU ROWS -->
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_general"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_appearance"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_recent"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_freewindow"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_desktop"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_advanced"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_permissions"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <include layout="@layout/item_menu_row"
+                android:id="@+id/row_quad_windows"/>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+            <!-- Spacer + version -->
+            <View android:layout_width="match_parent" android:layout_height="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Taskbar v6.2.0"
+                android:textColor="@color/disabled_text"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:paddingBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

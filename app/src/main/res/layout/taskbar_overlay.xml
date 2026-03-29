@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/taskbar_background"
+    android:padding="6dp"
+    android:elevation="8dp">
+
+    <!-- Flecha para contraer/expandir la barra -->
+    <ImageButton
+        android:id="@+id/btnCollapse"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow_down_float"
+        android:background="@drawable/button_background"
+        android:contentDescription="@string/taskbar_status"
+        android:scaleType="centerInside"
+        android:padding="6dp" />
+
+    <!-- Botón menú de inicio (todas las apps); se mantiene alumbrado hasta que abre la ventana -->
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_windows"
+        android:background="@drawable/button_background_start"
+        android:contentDescription="@string/start_menu"
+        android:scaleType="centerInside"
+        android:padding="6dp" />
+
+    <!-- Pinned Apps RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pinnedAppsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal" />
+
+    <!-- System Tray -->
+    <LinearLayout
+        android:id="@+id/systemTray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Clock -->
+        <TextView
+            android:id="@+id/clockTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

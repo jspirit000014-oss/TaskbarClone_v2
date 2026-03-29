@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Taskbar -->
+    <color name="bg">#FF212121</color>
+    <color name="surface">#FF2D2D2D</color>
+    <color name="surface2">#FF383838</color>
+    <color name="text">#FFE0E0E0</color>
+    <color name="muted">#FF9E9E9E</color>
+    <color name="orange">#FFE67E22</color>
+    <color name="orange2">#FFF39C12</color>
+    <color name="divider">#FF3A3A3A</color>
+    <color name="disabled_text">#FF555555</color>
+    <color name="header_bg">#FF3C3C8F</color>
+    <color name="check_off">#FF444444</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="ripple">#1AFFFFFF</color>
+    <color name="green">#FF4CAF50</color>
+    <!-- Referenciados por layouts/drawables existentes -->
+    <color name="primary">@color/orange</color>
+    <color name="taskbar_background">@color/surface</color>
+</resources>

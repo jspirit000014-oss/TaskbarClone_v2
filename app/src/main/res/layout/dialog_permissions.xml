@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/surface"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="28dp">
+
+    <!-- Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#FF555555"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔐  Permisos de Taskbar"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Concede estos permisos para que Taskbar funcione correctamente. Toca cada botón o usa &#34;Conceder todos&#34;."
+        android:textColor="@color/muted"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- PERMISO: Superponer -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingTop="10dp" android:paddingBottom="10dp"
+        android:background="@color/surface">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content"
+            android:text="🪟" android:textSize="20sp" android:gravity="center"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Superponer sobre otras apps" android:textColor="@color/text"
+                android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Mostrar la barra de tareas sobre otras aplicaciones"
+                android:textColor="@color/muted" android:textSize="11sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_perm_overlay"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="Conceder" android:textSize="11sp" android:textColor="@color/orange2"
+            android:background="@drawable/btn_perm_grant"
+            android:layout_marginStart="8dp" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+    <!-- PERMISO: Datos de uso -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingTop="10dp" android:paddingBottom="10dp">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content"
+            android:text="📊" android:textSize="20sp" android:gravity="center"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Acceso a datos de uso" android:textColor="@color/text"
+                android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Necesario para mostrar aplicaciones recientes"
+                android:textColor="@color/muted" android:textSize="11sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_perm_usage"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="Conceder" android:textSize="11sp" android:textColor="@color/orange2"
+            android:background="@drawable/btn_perm_grant"
+            android:layout_marginStart="8dp" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+    <!-- PERMISO: Notificaciones -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingTop="10dp" android:paddingBottom="10dp">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content"
+            android:text="🔔" android:textSize="20sp" android:gravity="center"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Acceso a notificaciones" android:textColor="@color/text"
+                android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Mostrar recuento de notificaciones en la barra"
+                android:textColor="@color/muted" android:textSize="11sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_perm_notif"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="Conceder" android:textSize="11sp" android:textColor="@color/orange2"
+            android:background="@drawable/btn_perm_grant"
+            android:layout_marginStart="8dp" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+    <!-- PERMISO: Accesibilidad -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingTop="10dp" android:paddingBottom="10dp">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content"
+            android:text="♿" android:textSize="20sp" android:gravity="center"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Servicio de accesibilidad" android:textColor="@color/text"
+                android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Gestos de navegación y atajos de teclado"
+                android:textColor="@color/muted" android:textSize="11sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_perm_a11y"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="Conceder" android:textSize="11sp" android:textColor="@color/orange2"
+            android:background="@drawable/btn_perm_grant"
+            android:layout_marginStart="8dp" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+    <!-- PERMISO: Admin -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingTop="10dp" android:paddingBottom="10dp">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content"
+            android:text="📱" android:textSize="20sp" android:gravity="center"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Administrador del dispositivo" android:textColor="@color/text"
+                android:textSize="13sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Bloquear pantalla desde Taskbar"
+                android:textColor="@color/muted" android:textSize="11sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_perm_admin"
+            android:layout_width="wrap_content" android:layout_height="32dp"
+            android:text="Conceder" android:textSize="11sp" android:textColor="@color/orange2"
+            android:background="@drawable/btn_perm_grant"
+            android:layout_marginStart="8dp" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+    <!-- Botón conceder todos -->
+    <Button
+        android:id="@+id/btn_grant_all_perms"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_orange"
+        android:text="✅  Conceder todos los permisos"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/btn_close_perms"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="Cerrar"
+        android:textColor="@color/muted"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackground"/>
+</LinearLayout>

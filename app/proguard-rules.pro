@@ -1,0 +1,2 @@
+-keep class com.taskbar.app.** { *; }
+-keepattributes *Annotation*

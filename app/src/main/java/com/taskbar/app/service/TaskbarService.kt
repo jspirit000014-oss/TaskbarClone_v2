@@ -258,6 +258,20 @@ class TaskbarService : Service() {
         )
         appsRecyclerView.adapter = adapter
         
+        // Acceso rápido (pinned apps en el menú)
+        val pinnedMenuRecycler = startMenuView.findViewById<RecyclerView>(R.id.pinnedAppsMenuRecyclerView)
+        val pinnedApps = preferenceManager.getPinnedApps().mapNotNull { appManager.getAppInfo(it) }
+        if (pinnedApps.isEmpty()) {
+            startMenuView.findViewById<android.view.View>(R.id.quickAccessSection).visibility = android.view.View.GONE
+        } else {
+            pinnedMenuRecycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            pinnedMenuRecycler.adapter = PinnedAppsAdapter(
+                pinnedApps,
+                onAppClick = { launchApp(it, freeform = true) },
+                onAppLongClick = { showAppContextMenu(it, fromPinned = true) }
+            )
+        }
+
         // Búsqueda
         val searchView = startMenuView.findViewById<SearchView>(R.id.searchView)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -281,7 +295,6 @@ class TaskbarService : Service() {
                 @Suppress("DEPRECATION")
                 WindowManager.LayoutParams.TYPE_PHONE
             },
-            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
                     WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
             PixelFormat.TRANSLUCENT
         ).apply {

@@ -14,7 +14,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build
+        working-directory: .
         run: |
+          ls -la
           chmod +x gradlew
           ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4

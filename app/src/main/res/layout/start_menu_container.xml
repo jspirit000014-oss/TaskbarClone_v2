@@ -67,6 +67,27 @@
                 app:iconifiedByDefault="false"
                 app:queryHint="@string/search_apps" />
 
+            <!-- Acceso rápido (pinned apps) -->
+            <LinearLayout
+                android:id="@+id/quickAccessSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acceso r00e1pido"
+                    android:textSize="12sp"
+                    android:padding="4dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pinnedAppsMenuRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+            </LinearLayout>
+
             <!-- Apps List -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/allAppsRecyclerView"

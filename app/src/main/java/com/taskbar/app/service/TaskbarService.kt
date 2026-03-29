@@ -262,7 +262,7 @@ class TaskbarService : Service() {
         val pinnedMenuRecycler = startMenuView.findViewById<RecyclerView>(R.id.pinnedAppsMenuRecyclerView)
         val pinnedApps = preferenceManager.getPinnedApps().mapNotNull { appManager.getAppInfo(it) }
         if (pinnedApps.isEmpty()) {
-            startMenuView.findViewById<android.view.View>(R.id.quickAccessSection).visibility = android.view.View.GONE
+            startMenuView.findViewById<android.view.View>(R.id.quickAccessSection)?.visibility = android.view.View.GONE
         } else {
             pinnedMenuRecycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             pinnedMenuRecycler.adapter = PinnedAppsAdapter(
